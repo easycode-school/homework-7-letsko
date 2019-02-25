@@ -10,6 +10,10 @@ export class AuthGuard implements CanActivate {
     private auth: AuthService,
     private router: Router
   ) {}
+
+  /**
+   * Проверяет залогинен ли пользователь, если пользователь не залогинен - редиректит его на страницу 'login'.
+   */
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     if (!this.auth.isAuth()) {
       this.router.navigate(['/login']);

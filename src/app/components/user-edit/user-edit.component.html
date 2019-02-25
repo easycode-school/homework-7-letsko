@@ -1,0 +1,21 @@
+<div class="container">
+    <form name="editForm" #editForm="ngForm" (ngSubmit)="onEdit()">
+        <a class="btn btn-primary" routerLink="/users/{{ user?.id }}">Cansel</a>
+        <button type="submit" class="btn btn-primary ml-1" [disabled]="!name || !email"><i class="far fa-save"></i> Save</button>
+        <ul class="list-group mt-5">
+            <input type="text" 
+                class="list-group-item"
+                id="name"
+                name="name"
+                [(ngModel)]="name"
+                required>
+            <input type="text" 
+                class="list-group-item"
+                id="email"
+                name="email"
+                [(ngModel)]="email"
+                required>
+        </ul>
+    </form>
+</div>
+<p-toast position="bottom-right"></p-toast>
