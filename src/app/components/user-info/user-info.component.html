@@ -1,5 +1,6 @@
 <div class="container">
-  <button class="btn btn-primary" (click)="navigateExmpl()">Go back</button>
+  <button type="button" class="btn btn-primary" (click)="goBack()"><i class="fas fa-arrow-left"></i> Go back</button>
+  <a class="btn btn-primary ml-1" routerLink="/users/{{ user?.id }}/edit"><i class="fas fa-pencil-alt"></i> Edit</a>
   <ul class="list-group mt-5">
     <li class="list-group-item">{{ user?.name }}</li>
     <li class="list-group-item">{{ user?.email }}</li>
